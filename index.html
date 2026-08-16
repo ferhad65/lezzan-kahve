@@ -1,106 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lezzan Kahve</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lezzan Kahve - Konya. Türk kahvesi, filtre kahve, espresso, dibek, menengiç ve özel kahve çeşitleri.">
+<title>Lezzan Kahve | Kahvenin Lezzet Hali</title>
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4eadb;
-    color: #3b2418;
-    text-align: center;
-}
-
-.container {
-    max-width: 480px;
-    margin: auto;
-    padding: 45px 25px;
-}
-
-.logo {
-    width: 110px;
-    height: 110px;
-    margin: auto;
-    border-radius: 50%;
-    background: #3b2418;
-    color: #e6c17a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-size: 32px;
-    margin: 20px 0 5px;
-}
-
-.subtitle {
-    color: #725843;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: block;
-    padding: 17px;
-    margin: 14px 0;
-    border-radius: 14px;
-    text-decoration: none;
-    background: #3b2418;
-    color: white;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.gold {
-    background: #c49a54;
-    color: #25170f;
-}
-
-.footer {
-    margin-top: 30px;
-    color: #725843;
-    font-size: 14px;
-}
+:root{--b:#5b2d22;--b2:#7b4534;--g:#b8894a;--c:#fbf7f1;--t:#2b211d;--m:#75665f}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--c);color:var(--t);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#fbf7f1f5;border-bottom:1px solid #eadfd4}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;color:var(--b);font-weight:800;font-size:20px}
+.brand img{width:55px;height:55px;object-fit:contain}nav{display:flex;gap:25px;font-weight:700;font-size:14px}nav a:hover{color:var(--g)}
+.hero{min-height:calc(100vh - 78px);display:grid;place-items:center;background:radial-gradient(circle at 80% 20%,#ead9c5,transparent 34%),linear-gradient(135deg,#fbf7f1,#f1e5d8)}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;padding:70px 0}
+.eyebrow{display:inline-block;color:var(--g);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:12px}
+h1{font-family:Georgia,serif;color:var(--b);font-size:clamp(50px,7vw,82px);line-height:.95;margin-bottom:20px}
+.hero h2{font-size:clamp(20px,3vw,30px);font-weight:500;margin-bottom:15px}.hero p{color:var(--m);max-width:600px;font-size:17px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{padding:13px 20px;border-radius:999px;font-weight:800;display:inline-block}
+.primary{background:var(--b);color:#fff}.light{background:#fff;border:1px solid #d7c4b4;color:var(--b)}
+.hero-logo{text-align:center}.hero-logo img{width:min(390px,80vw);filter:drop-shadow(0 20px 30px #46231925)}
+section{padding:85px 0}.head{text-align:center;margin-bottom:40px}.head h2{font:42px Georgia,serif;color:var(--b)}.head p{color:var(--m);max-width:650px;margin:10px auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #eee1d5;border-radius:20px;padding:23px;box-shadow:0 12px 35px #3d231a12}
+.card h3{color:var(--b);font-size:18px}.card p{color:var(--m);font-size:14px;margin-top:5px}.tag{display:inline-block;margin-top:5px;padding:3px 9px;border-radius:99px;background:#f6eadc;color:var(--g);font-size:11px;font-weight:800}
+.extras{background:#f0e4d8}.extra-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.extra{background:#fff;border-radius:18px;padding:23px;box-shadow:0 12px 35px #3d231a12}.extra h3{color:var(--b);font-size:17px}.extra p{color:var(--m);font-size:13px}
+.contact{background:var(--b);color:#fff}.contact .head h2,.contact .head .eyebrow{color:#fff}.contact .head p{color:#eadbd2}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact-card{background:#ffffff12;border:1px solid #ffffff26;border-radius:20px;padding:28px;text-align:center}.contact-card .big{font-size:30px}.contact-card p{color:#eadbd2}.contact-card a{font-weight:800}
+footer{background:#3c2019;color:#d9c8bf;text-align:center;padding:25px;font-size:13px}.float{position:fixed;right:20px;bottom:20px;background:#168c55;color:#fff;padding:13px 18px;border-radius:999px;font-weight:800;z-index:20}
+@media(max-width:850px){nav{display:none}.hero-inner{grid-template-columns:1fr;text-align:center}.hero p{margin:auto}.buttons{justify-content:center}.grid{grid-template-columns:1fr 1fr}.extra-grid{grid-template-columns:1fr 1fr}.contact-grid{grid-template-columns:1fr}}
+@media(max-width:540px){section{padding:65px 0}.grid,.extra-grid{grid-template-columns:1fr}.hero-logo{order:-1}.hero-logo img{width:250px}h1{font-size:55px}}
 </style>
 </head>
-
 <body>
+<header><div class="container nav">
+<a class="brand" href="#anasayfa"><img src="logo.png" alt="Lezzan Kahve"><span>Lezzan Kahve</span></a>
+<nav><a href="#anasayfa">Ana Sayfa</a><a href="#kahveler">Kahveler</a><a href="#lezzetler">Lezzetler</a><a href="#iletisim">İletişim</a></nav>
+</div></header>
 
-<div class="container">
+<section class="hero" id="anasayfa"><div class="container hero-inner">
+<div><span class="eyebrow">Konya'dan kahve keyfi</span><h1>Lezzan<br>Kahve</h1>
+<h2>Gelenekten gelen lezzet, özenle kavrulan kahve.</h2>
+<p>Türk kahvesinden filtre ve espressoya, dibek ve menengiç kahvelerinden özel aromalı çeşitlere kadar kahve keyfiniz için seçkin lezzetler.</p>
+<div class="buttons"><a class="btn primary" href="#kahveler">Kahveleri Keşfet</a><a class="btn light" target="_blank" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x31bc994622ba7117?entry=s&sa=X&ved=2ahUKEwiaoLPhh6aWAxWjQ_EDHWOWO9cQ4kB6BAgWEAA&hl=tr">📍 Yol Tarifi</a></div>
+</div><div class="hero-logo"><img src="logo.png" alt="Lezzan Kahve logosu"></div>
+</div></section>
 
-<div class="logo">
-LEZZAN<br>KAHVE
-</div>
+<section id="kahveler"><div class="container"><div class="head"><span class="eyebrow">Kahve çeşitlerimiz</span><h2>Her damak tadına bir Lezzan</h2><p>Geleneksel Türk kahvesinden modern kahve seçeneklerine kadar.</p></div>
+<div class="grid">
+<div class="card"><h3>Türk Kahvesi</h3><span class="tag">Az Kavrulmuş</span><p>Hafif içim, yumuşak ve dengeli aroma.</p></div>
+<div class="card"><h3>Türk Kahvesi</h3><span class="tag">Orta Kavrum</span><p>Dengeli kavrum ve yoğun aroma.</p></div>
+<div class="card"><h3>Türk Kahvesi</h3><span class="tag">Çifte Kavrulmuş</span><p>Yoğun ve güçlü kahve karakteri.</p></div>
+<div class="card"><h3>Filtre Kahve</h3><p>Aromatik ve dengeli günlük kahve keyfi.</p></div>
+<div class="card"><h3>Espresso Kahve</h3><p>Yoğun aroma ve güçlü gövde.</p></div>
+<div class="card"><h3>Menengiç Kahvesi</h3><p>Kendine özgü aromasıyla geleneksel lezzet.</p></div>
+<div class="card"><h3>Osmanlı Kahvesi</h3><p>Özel harmanlanmış geleneksel kahve keyfi.</p></div>
+<div class="card"><h3>Dibek Kahvesi</h3><p>Yumuşak içimli, geleneksel dibek lezzeti.</p></div>
+<div class="card"><h3>Meyve Aromalı Kahve</h3><p>Farklı meyve aromalarıyla renkli kahve deneyimi.</p></div>
+<div class="card"><h3>Antep Fıstıklı Dibek</h3><p>Dibek kahvesi ve Antep fıstığının özel uyumu.</p></div>
+<div class="card"><h3>Fındıklı Dibek</h3><p>Kahve ve fındık aromasının nefis buluşması.</p></div>
+<div class="card"><h3>Damla Sakızlı Dibek</h3><p>Damla sakızı aromasıyla özel dibek kahvesi.</p></div>
+<div class="card"><h3>Özel Harman Alypresso Dibek</h3><p>Lezzan Kahve'nin özel harmanlarından.</p></div>
+</div></div></section>
 
-<h1>Lezzan Kahve</h1>
+<section class="extras" id="lezzetler"><div class="container"><div class="head"><span class="eyebrow">Kahvenin yanında</span><h2>Sevilen tamamlayıcı lezzetler</h2></div>
+<div class="extra-grid">
+<div class="extra"><h3>Mevlana Şekeri</h3><p>Geleneksel Konya lezzeti.</p></div>
+<div class="extra"><h3>Akide Şekeri</h3><p>Klasik şekerleme çeşitleri.</p></div>
+<div class="extra"><h3>Kuruyemiş Çeşitleri</h3><p>Taze ve seçkin kuruyemişler.</p></div>
+<div class="extra"><h3>Kolonya Çeşitleri</h3><p>Farklı koku ve seçenekler.</p></div>
+</div></div></section>
 
-<div class="subtitle">
-Taze Kavrulmuş Kahve • Lezzet • Kalite
-</div>
-
-<a class="button" href="https://wa.me/905455105242">
-💬 WhatsApp'tan Ulaş
-</a>
-
-<a class="button gold" href="https://instagram.com/lezzankahve">
-📸 Instagram @lezzankahve
-</a>
-
-<a class="button" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x31bc994622ba7117?entry=s&sa=X&ved=2ahUKEwjptI-M_qSWAxUgQ_EDHUQYBgcQ4kB6BAgSEAA&hl=tr">
-📍 Konumumuzu Gör
-</a>
-
-<div class="footer">
-Bizi ziyaret ettiğiniz için teşekkür ederiz. ☕
-</div>
-
-</div>
-
-</body>
-</html>
+<section class="contact" id="iletisim"><div class="container"><div class="head"><span class="eyebrow">Bize ulaşın</span><h2>Lezzan Kahve'ye bekleriz</h2><p>Ürünlerimiz hakkında bilgi almak veya mağazamıza yol tarifi almak için bize ulaşabilirsiniz.</p></div>
+<div class="contact-grid">
+<div class="contact-card"><div class="big">📞</div><h3>Telefon</h3><p><a href="tel:+905455105242">0545 510 52 42</a></p></div>
+<div class="contact-card"><div class="big">📸</div><h3>Instagram</h3><p><a target="_blank" href="https://instagram.com/lezzankahve">@lezzankahve</a></p></div>
+<div class="contact-card"><div class="big">📍</div><h3>Mağazamız</h3><p><a target="_blank" href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x31bc994622ba7117?entry=s&sa=X&ved=2ahUKEwiaoLPhh6aWAxWjQ_EDHWOWO9cQ4kB6BAgWEAA&hl=tr">Google Maps'te aç</a></p></div>
+</div></div></section>
+<a class="float" target="_blank" href="https://wa.me/905455105242?text=Merhaba%20Lezzan%20Kahve%2C%20bilgi%20almak%20istiyorum.">💬 WhatsApp</a>
+<footer>© 2026 Lezzan Kahve · Tüm hakları saklıdır.</footer>
+</body></html>
