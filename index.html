@@ -1,487 +1,593 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<meta name="description" content="Lezzan Kahve - Konya. Türk kahvesi, filtre kahve, espresso, dibek, menengiç ve özel kahve çeşitleri.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Lezzan Kahve | Kahvenin Lezzet Hali</title>
 
+<meta name="description"
+content="Lezzan Kahve - Türk kahvesi, filtre kahve, espresso, dibek, menengiç ve özel kahve çeşitleri.">
+
 <style>
-:root{
-  --b:#5b2d22;
-  --b2:#7b4534;
-  --g:#b8894a;
-  --c:#fbf7f1;
-  --t:#2b211d;
-  --m:#75665f
-}
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--c);
-  color:var(--t);
-  line-height:1.6
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fbf7f1;
+    color:#33251f;
 }
 
-a{
-  text-decoration:none;
-  color:inherit
+/* RENKLER */
+
+:root{
+    --kahve:#65352a;
+    --kahve2:#8b5140;
+    --altin:#b8894a;
+    --krem:#fbf7f1;
+    --acik:#f1e5d8;
+    --metin:#6f625b;
 }
+
+/* GENEL */
 
 .container{
-  width:min(1120px,92%);
-  margin:auto
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:80px 0;
 }
 
 /* HEADER */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:#fbf7f1f5;
-  border-bottom:1px solid #eadfd4
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(251,247,241,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid #eaded3;
 }
 
 .nav{
-  height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:var(--b);
-  font-weight:800;
-  font-size:20px
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.brand img{
-  width:55px;
-  height:55px;
-  object-fit:contain
+.logo-area img{
+    width:52px;
+    height:58px;
+    object-fit:contain;
+
+    /* PNG'nin şeffaf arka planı korunur */
+    background:transparent;
+}
+
+.logo-text{
+    color:var(--kahve);
+    font-size:20px;
+    font-weight:800;
 }
 
 nav{
-  display:flex;
-  gap:25px;
-  font-weight:700;
-  font-size:14px
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#4e4039;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
 nav a:hover{
-  color:var(--g)
+    color:var(--kahve);
 }
 
 /* HERO */
 
 .hero{
-  min-height:calc(100vh - 78px);
-  display:grid;
-  place-items:center;
-  background:
-  radial-gradient(circle at 80% 20%,#ead9c5,transparent 34%),
-  linear-gradient(135deg,#fbf7f1,#f1e5d8)
+    min-height:calc(100vh - 76px);
+    display:flex;
+    align-items:center;
+
+    background:
+    radial-gradient(
+        circle at 80% 20%,
+        rgba(184,137,74,.16),
+        transparent 35%
+    ),
+    linear-gradient(
+        135deg,
+        #fbf7f1 0%,
+        #f5ebdf 100%
+    );
 }
 
-.hero-inner{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:50px;
-  padding:70px 0
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
 }
 
 .eyebrow{
-  display:inline-block;
-  color:var(--g);
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-size:13px;
-  margin-bottom:12px
+    color:var(--altin);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:14px;
 }
 
-h1{
-  font-family:Georgia,serif;
-  color:var(--b);
-  font-size:clamp(50px,7vw,82px);
-  line-height:.95;
-  margin-bottom:20px
+.hero h1{
+    font-family:Georgia,serif;
+    color:var(--kahve);
+    font-size:clamp(55px,7vw,82px);
+    line-height:.95;
+    margin-bottom:24px;
 }
 
 .hero h2{
-  font-size:clamp(20px,3vw,30px);
-  font-weight:500;
-  margin-bottom:15px
+    font-size:26px;
+    font-weight:500;
+    line-height:1.35;
+    margin-bottom:16px;
 }
 
 .hero p{
-  color:var(--m);
-  max-width:600px;
-  font-size:17px
+    color:var(--metin);
+    font-size:16px;
+    line-height:1.8;
+    max-width:600px;
 }
 
 .buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:26px
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  padding:13px 20px;
-  border-radius:999px;
-  font-weight:800;
-  display:inline-block
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 22px;
+    border-radius:30px;
+    font-weight:700;
+    transition:.3s;
 }
 
-.primary{
-  background:var(--b);
-  color:#fff
+.btn-primary{
+    background:var(--kahve);
+    color:white;
 }
 
-.light{
-  background:#fff;
-  border:1px solid #d7c4b4;
-  color:var(--b)
+.btn-primary:hover{
+    background:#4d271f;
+    transform:translateY(-2px);
 }
+
+.btn-light{
+    background:white;
+    color:var(--kahve);
+    border:1px solid #dfcdbd;
+}
+
+.btn-light:hover{
+    background:#f7eee5;
+}
+
+/* ANA LOGO */
 
 .hero-logo{
-  text-align:center
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .hero-logo img{
-  width:min(390px,80vw);
-  filter:drop-shadow(0 20px 30px #46231925)
+    width:min(440px,85%);
+    height:auto;
+    display:block;
+
+    /* ŞEFFAF PNG */
+    background:transparent;
+
+    filter:drop-shadow(0 18px 25px rgba(70,40,25,.12));
 }
 
-/* SECTIONS */
+/* BAŞLIKLAR */
 
-section{
-  padding:85px 0
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.head{
-  text-align:center;
-  margin-bottom:40px
+.section-title h2{
+    font-family:Georgia,serif;
+    color:var(--kahve);
+    font-size:42px;
+    margin-bottom:10px;
 }
 
-.head h2{
-  font:42px Georgia,serif;
-  color:var(--b)
+.section-title p{
+    color:var(--metin);
 }
 
-.head p{
-  color:var(--m);
-  max-width:650px;
-  margin:10px auto
+/* KAHVELER */
+
+#kahveler{
+    background:#fff;
 }
 
-/* COFFEE CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px
+.coffee-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
 }
 
-.card{
-  background:#fff;
-  border:1px solid #eee1d5;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 12px 35px #3d231a12
+.coffee-card{
+    background:#fff;
+    border:1px solid #eaded3;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(60,35,25,.08);
+    transition:.3s;
 }
 
-.card-photo{
-  height:220px;
-  background:#f5ede4;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden
+.coffee-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(60,35,25,.14);
 }
 
-.card-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover
+/* ÜRÜN GÖRSELİ */
+
+.product-image{
+    height:250px;
+    background:#f5eee7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px;
+    overflow:hidden;
 }
 
-.card-photo img.contain{
-  object-fit:contain;
-  padding:8px
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
-.card-body{
-  padding:20px 23px 23px
+/* KART */
+
+.product-info{
+    padding:20px 22px 24px;
 }
 
-.card h3{
-  color:var(--b);
-  font-size:18px
+.product-tag{
+    display:inline-block;
+    background:#f4e8da;
+    color:#a3753e;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:9px;
 }
 
-.card p{
-  color:var(--m);
-  font-size:14px;
-  margin-top:5px
+.product-info h3{
+    color:var(--kahve);
+    font-family:Georgia,serif;
+    font-size:22px;
+    margin-bottom:6px;
 }
 
-.tag{
-  display:inline-block;
-  margin-top:5px;
-  padding:3px 9px;
-  border-radius:99px;
-  background:#f6eadc;
-  color:var(--g);
-  font-size:11px;
-  font-weight:800
+.product-info p{
+    color:var(--metin);
+    font-size:14px;
+    line-height:1.6;
 }
 
-/* EXTRA */
+/* LEZZETLER */
 
-.extras{
-  background:#f0e4d8
+#lezzetler{
+    background:#f1e5d8;
 }
 
-.extra-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px
+.taste-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.extra{
-  background:#fff;
-  border-radius:18px;
-  padding:23px;
-  box-shadow:0 12px 35px #3d231a12
+.taste-card{
+    background:white;
+    padding:28px 22px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(60,35,25,.07);
 }
 
-.extra h3{
-  color:var(--b);
-  font-size:17px
+.taste-icon{
+    font-size:30px;
+    margin-bottom:12px;
 }
 
-.extra p{
-  color:var(--m);
-  font-size:13px
+.taste-card h3{
+    color:var(--kahve);
+    margin-bottom:7px;
+}
+
+.taste-card p{
+    color:var(--metin);
+    font-size:13px;
 }
 
 /* QR */
 
-.qr-section{
-  background:#fffaf5
+#karekod{
+    background:#fffaf5;
 }
 
-.qr-box{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:45px;
-  flex-wrap:wrap
+.qr-area{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
 }
 
-.qr-box img{
-  width:210px;
-  height:210px;
-  border-radius:12px;
-  box-shadow:0 10px 30px #3d231a18
+.qr-area img{
+    width:220px;
+    height:220px;
+    object-fit:contain;
+    border-radius:12px;
 }
 
 .qr-text{
-  max-width:480px
+    max-width:500px;
 }
 
 .qr-text h3{
-  color:var(--b);
-  font:32px Georgia,serif;
-  margin-bottom:8px
+    color:var(--kahve);
+    font-family:Georgia,serif;
+    font-size:32px;
+    margin-bottom:12px;
 }
 
 .qr-text p{
-  color:var(--m);
-  margin-bottom:18px
+    color:var(--metin);
+    line-height:1.7;
+    margin-bottom:22px;
 }
 
-/* CONTACT */
+/* İLETİŞİM */
 
-.contact{
-  background:var(--b);
-  color:#fff
+#iletisim{
+    background:var(--kahve);
+    color:white;
 }
 
-.contact .head h2,
-.contact .head .eyebrow{
-  color:#fff
+#iletisim .section-title h2{
+    color:white;
 }
 
-.contact .head p{
-  color:#eadbd2
+#iletisim .section-title p{
+    color:#e8d8ce;
 }
 
 .contact-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
 .contact-card{
-  background:#ffffff12;
-  border:1px solid #ffffff26;
-  border-radius:20px;
-  padding:28px;
-  text-align:center
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
 }
 
-.contact-card .big{
-  font-size:30px
+.contact-card .icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.contact-card h3{
+    margin-bottom:8px;
 }
 
 .contact-card p{
-  color:#eadbd2
+    color:#e7d8cf;
 }
 
 .contact-card a{
-  font-weight:800
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    background:#159957;
+    color:white;
+    padding:14px 21px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:800;
+    z-index:2000;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
 
 /* FOOTER */
 
 footer{
-  background:#3c2019;
-  color:#d9c8bf;
-  text-align:center;
-  padding:25px;
-  font-size:13px
-}
-
-/* WHATSAPP */
-
-.float{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#168c55;
-  color:#fff;
-  padding:13px 18px;
-  border-radius:999px;
-  font-weight:800;
-  z-index:20
+    background:#3c2019;
+    color:#d8c8bf;
+    text-align:center;
+    padding:25px;
+    font-size:13px;
 }
 
 /* TABLET */
 
-@media(max-width:850px){
+@media(max-width:900px){
 
-  nav{
-    display:none
-  }
+    .hero-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-  .hero-inner{
-    grid-template-columns:1fr;
-    text-align:center
-  }
+    .hero p{
+        margin:auto;
+    }
 
-  .hero p{
-    margin:auto
-  }
+    .buttons{
+        justify-content:center;
+    }
 
-  .buttons{
-    justify-content:center
-  }
+    .hero-logo{
+        order:-1;
+    }
 
-  .grid{
-    grid-template-columns:1fr 1fr
-  }
+    .hero-logo img{
+        width:280px;
+    }
 
-  .extra-grid{
-    grid-template-columns:1fr 1fr
-  }
+    .coffee-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .contact-grid{
-    grid-template-columns:1fr
-  }
+    .taste-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
 
-/* MOBILE */
+/* TELEFON */
 
-@media(max-width:540px){
+@media(max-width:600px){
 
-  section{
-    padding:65px 0
-  }
+    nav{
+        display:none;
+    }
 
-  .grid,
-  .extra-grid{
-    grid-template-columns:1fr
-  }
+    section{
+        padding:60px 0;
+    }
 
-  .hero-logo{
-    order:-1
-  }
+    .hero{
+        min-height:auto;
+    }
 
-  .hero-logo img{
-    width:250px
-  }
+    .hero-content{
+        gap:30px;
+    }
 
-  h1{
-    font-size:55px
-  }
+    .hero-logo img{
+        width:240px;
+    }
 
-  .qr-box{
-    gap:25px
-  }
+    .hero h1{
+        font-size:56px;
+    }
 
-  .qr-box img{
-    width:180px;
-    height:180px
-  }
+    .hero h2{
+        font-size:21px;
+    }
 
-  .card-photo{
-    height:240px
-  }
+    .coffee-grid{
+        grid-template-columns:1fr;
+    }
+
+    .taste-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .product-image{
+        height:280px;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+        padding:12px 17px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- HEADER -->
 
 <header>
+
 <div class="container nav">
 
-<a class="brand" href="#anasayfa">
-<img src="logo.png" alt="Lezzan Kahve">
-<span>Lezzan Kahve</span>
+<a href="#anasayfa" class="logo-area">
+
+<img src="logo.png" alt="Lezzan Kahve Logo">
+
+<span class="logo-text">
+Lezzan Kahve
+</span>
+
 </a>
 
 <nav>
+
 <a href="#anasayfa">Ana Sayfa</a>
 <a href="#kahveler">Kahveler</a>
 <a href="#lezzetler">Lezzetler</a>
 <a href="#karekod">Karekod</a>
 <a href="#iletisim">İletişim</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
@@ -489,20 +595,22 @@ footer{
 
 <section class="hero" id="anasayfa">
 
-<div class="container hero-inner">
+<div class="container hero-content">
 
 <div>
 
-<span class="eyebrow">
-Konya'dan kahve keyfi
-</span>
+<div class="eyebrow">
+Konya'dan Kahve Keyfi
+</div>
 
 <h1>
-Lezzan<br>Kahve
+Lezzan<br>
+Kahve
 </h1>
 
 <h2>
-Gelenekten gelen lezzet, özenle kavrulan kahve.
+Gelenekten gelen lezzet,
+özenle kavrulan kahve.
 </h2>
 
 <p>
@@ -513,15 +621,14 @@ dibek ve menengiç kahvelerinden özel aromalı
 
 <div class="buttons">
 
-<a class="btn primary" href="#kahveler">
+<a href="#kahveler" class="btn btn-primary">
 Kahveleri Keşfet
 </a>
 
 <a
-class="btn light"
+href="https://maps.google.com"
 target="_blank"
-rel="noopener"
-href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x31bc994622ba7117?entry=s&sa=X&ved=2ahUKEwiaoLPhh6aWAxWjQ_EDHWOWO9cQ4kB6BAgWEAA&hl=tr">
+class="btn btn-light">
 📍 Yol Tarifi
 </a>
 
@@ -529,11 +636,17 @@ href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x3
 
 </div>
 
+
 <div class="hero-logo">
-<img src="logo.png" alt="Lezzan Kahve logosu">
+
+<img
+src="logo.png"
+alt="Lezzan Kahve">
+
 </div>
 
 </div>
+
 </section>
 
 
@@ -543,322 +656,417 @@ href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x3
 
 <div class="container">
 
-<div class="head">
+<div class="section-title">
 
-<span class="eyebrow">
-Kahve çeşitlerimiz
-</span>
+<div class="eyebrow">
+Kahve Çeşitlerimiz
+</div>
 
 <h2>
 Her damak tadına bir Lezzan
 </h2>
 
 <p>
-Geleneksel Türk kahvesinden modern kahve seçeneklerine kadar.
+Özenle hazırlanan kahvelerimizi keşfedin.
+Her fincanda Lezzan Kahve farkı.
 </p>
 
 </div>
 
 
-<div class="grid">
+<div class="coffee-grid">
 
 
-<!-- 1 -->
+<!-- 1 YUMUŞAK -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="yumuşak içim.png"
 alt="Yumuşak İçim Türk Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Türk Kahvesi</h3>
-
-<span class="tag">
+<span class="product-tag">
 Az Kavrulmuş
 </span>
+
+<h3>
+Yumuşak İçim Türk Kahvesi
+</h3>
 
 <p>
 Hafif içim, yumuşak ve dengeli aroma.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 2 -->
+<!-- 2 ORTA -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="orta kavrum.png"
 alt="Orta Kavrum Türk Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Türk Kahvesi</h3>
-
-<span class="tag">
+<span class="product-tag">
 Orta Kavrum
 </span>
+
+<h3>
+Orta Kavrum Türk Kahvesi
+</h3>
 
 <p>
 Dengeli kavrum, zengin aroma ve yumuşak içim.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 3 -->
+<!-- 3 ÇİFTE -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="çifte kavrum.png"
 alt="Çifte Kavrulmuş Türk Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Türk Kahvesi</h3>
-
-<span class="tag">
-Çifte Kavrulmuş
+<span class="product-tag">
+Yoğun Aroma
 </span>
+
+<h3>
+Çifte Kavrulmuş Türk Kahvesi
+</h3>
 
 <p>
 Yoğun ve güçlü kahve karakteri.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 4 -->
+<!-- 4 FİLTRE -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="filtre.png"
 alt="Filtre Kahve">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Filtre Kahve</h3>
+<span class="product-tag">
+Günlük Kahve
+</span>
+
+<h3>
+Filtre Kahve
+</h3>
 
 <p>
 Aromatik ve dengeli günlük kahve keyfi.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 5 -->
+<!-- 5 ESPRESSO -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="espresso.png"
 alt="Espresso Kahve">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Espresso Kahve</h3>
+<span class="product-tag">
+Yoğun Gövde
+</span>
+
+<h3>
+Espresso Kahve
+</h3>
 
 <p>
-Yoğun aroma ve güçlü gövde.
+Yoğun aroma, güçlü gövde ve zengin kahve karakteri.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 6 -->
+<!-- 6 MENENGİÇ -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="menengic.png"
 alt="Menengiç Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Menengiç Kahvesi</h3>
+<span class="product-tag">
+Geleneksel
+</span>
+
+<h3>
+Menengiç Kahvesi
+</h3>
 
 <p>
 Kendine özgü aromasıyla geleneksel lezzet.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 7 -->
+<!-- 7 OSMANLI -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="osmanli.png"
 alt="Osmanlı Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Osmanlı Kahvesi</h3>
+<span class="product-tag">
+Geleneksel Harman
+</span>
+
+<h3>
+Osmanlı Kahvesi
+</h3>
 
 <p>
-Özel harmanlanmış geleneksel kahve keyfi.
+Geleneksel kahve kültüründen gelen özel harman.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 8 -->
+<!-- 8 DİBEK -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="dibek.png"
 alt="Dibek Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Dibek Kahvesi</h3>
+<span class="product-tag">
+Geleneksel
+</span>
+
+<h3>
+Dibek Kahvesi
+</h3>
 
 <p>
-Yumuşak içimli, geleneksel dibek lezzeti.
+Yumuşak içimli, geleneksel dibek kahvesi lezzeti.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 9 -->
+<!-- 9 ANTEP -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="atep dibek.png"
 alt="Antep Fıstıklı Dibek Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Antep Fıstıklı Dibek</h3>
+<span class="product-tag">
+Özel Aroma
+</span>
+
+<h3>
+Antep Fıstıklı Dibek
+</h3>
 
 <p>
 Dibek kahvesi ve Antep fıstığının özel uyumu.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 10 -->
+<!-- 10 FINDIK -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="fndk dibek.png"
 alt="Fındıklı Dibek Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Fındıklı Dibek</h3>
+<span class="product-tag">
+Özel Aroma
+</span>
+
+<h3>
+Fındıklı Dibek
+</h3>
 
 <p>
 Kahve ve fındık aromasının nefis buluşması.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 11 -->
+<!-- 11 DAMLA SAKIZI -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="damla sakızlı dibek.png"
 alt="Damla Sakızlı Dibek Kahvesi">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Damla Sakızlı Dibek</h3>
+<span class="product-tag">
+Özel Aroma
+</span>
+
+<h3>
+Damla Sakızlı Dibek
+</h3>
 
 <p>
-Damla sakızı aromasıyla özel dibek kahvesi.
+Damla sakızının eşsiz aromasıyla özel dibek kahvesi.
 </p>
 
 </div>
+
 </div>
 
 
-<!-- 12 -->
+<!-- 12 ALYPRESSO -->
 
-<div class="card">
+<div class="coffee-card">
 
-<div class="card-photo">
-<img class="contain"
+<div class="product-image">
+
+<img
 src="alypresso.png"
 alt="Alypresso">
+
 </div>
 
-<div class="card-body">
+<div class="product-info">
 
-<h3>Özel Harman Alypresso</h3>
-
-<span class="tag">
+<span class="product-tag">
 Özel Harman
 </span>
+
+<h3>
+Alypresso
+</h3>
 
 <p>
 Lezzan Kahve'nin özel harmanlarından güçlü ve aromatik kahve deneyimi.
 </p>
 
 </div>
+
 </div>
 
 
 </div>
+
 </div>
+
 </section>
 
 
 <!-- LEZZETLER -->
 
-<section class="extras" id="lezzetler">
+<section id="lezzetler">
 
 <div class="container">
 
-<div class="head">
+<div class="section-title">
 
-<span class="eyebrow">
-Kahvenin yanında
-</span>
+<div class="eyebrow">
+Kahvenin Yanında
+</div>
 
 <h2>
 Sevilen tamamlayıcı lezzetler
@@ -866,44 +1074,94 @@ Sevilen tamamlayıcı lezzetler
 
 </div>
 
-<div class="extra-grid">
 
-<div class="extra">
-<h3>Mevlana Şekeri</h3>
-<p>Geleneksel Konya lezzeti.</p>
-</div>
+<div class="taste-grid">
 
-<div class="extra">
-<h3>Akide Şekeri</h3>
-<p>Klasik şekerleme çeşitleri.</p>
+<div class="taste-card">
+
+<div class="taste-icon">
+🍬
 </div>
 
-<div class="extra">
-<h3>Kuruyemiş Çeşitleri</h3>
-<p>Taze ve seçkin kuruyemişler.</p>
-</div>
+<h3>
+Mevlana Şekeri
+</h3>
 
-<div class="extra">
-<h3>Kolonya Çeşitleri</h3>
-<p>Farklı koku ve seçenekler.</p>
-</div>
+<p>
+Geleneksel Konya lezzeti.
+</p>
 
 </div>
+
+
+<div class="taste-card">
+
+<div class="taste-icon">
+🍭
 </div>
+
+<h3>
+Akide Şekeri
+</h3>
+
+<p>
+Klasik şekerleme çeşitleri.
+</p>
+
+</div>
+
+
+<div class="taste-card">
+
+<div class="taste-icon">
+🥜
+</div>
+
+<h3>
+Kuruyemiş Çeşitleri
+</h3>
+
+<p>
+Taze ve seçkin kuruyemişler.
+</p>
+
+</div>
+
+
+<div class="taste-card">
+
+<div class="taste-icon">
+❤️
+</div>
+
+<h3>
+Kolonya Çeşitleri
+</h3>
+
+<p>
+Farklı koku ve seçenekler.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- QR -->
+<!-- KAREKOD -->
 
-<section class="qr-section" id="karekod">
+<section id="karekod">
 
 <div class="container">
 
-<div class="head">
+<div class="section-title">
 
-<span class="eyebrow">
+<div class="eyebrow">
 Bizi kolayca bulun
-</span>
+</div>
 
 <h2>
 Lezzan Kahve Karekod
@@ -911,11 +1169,12 @@ Lezzan Kahve Karekod
 
 </div>
 
-<div class="qr-box">
+
+<div class="qr-area">
 
 <img
 src="karekod.png"
-alt="Lezzan Kahve web sitesi karekodu">
+alt="Lezzan Kahve Karekod">
 
 <div class="qr-text">
 
@@ -925,15 +1184,13 @@ Telefonunuzla okutun
 
 <p>
 Karekodu okutarak Lezzan Kahve web sitemize
-hızlıca ulaşabilirsiniz. Site adresi, kahve
-çeşitlerimiz ve iletişim bilgilerimiz burada.
+hızlıca ulaşabilirsiniz.
 </p>
 
 <a
-class="btn primary"
 href="https://ferhad65.github.io/lezzan-kahve/"
 target="_blank"
-rel="noopener">
+class="btn btn-primary">
 
 Web Sitesini Aç
 
@@ -942,21 +1199,23 @@ Web Sitesini Aç
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
 <!-- İLETİŞİM -->
 
-<section class="contact" id="iletisim">
+<section id="iletisim">
 
 <div class="container">
 
-<div class="head">
+<div class="section-title">
 
-<span class="eyebrow">
-Bize ulaşın
-</span>
+<div class="eyebrow">
+Bize Ulaşın
+</div>
 
 <h2>
 Lezzan Kahve'ye bekleriz
@@ -964,7 +1223,7 @@ Lezzan Kahve'ye bekleriz
 
 <p>
 Ürünlerimiz hakkında bilgi almak veya
-mağazamıza yol tarifi almak için bize ulaşabilirsiniz.
+mağazamıza ulaşmak için bize ulaşabilirsiniz.
 </p>
 
 </div>
@@ -972,9 +1231,12 @@ mağazamıza yol tarifi almak için bize ulaşabilirsiniz.
 
 <div class="contact-grid">
 
+
 <div class="contact-card">
 
-<div class="big">📞</div>
+<div class="icon">
+📞
+</div>
 
 <h3>
 Telefon
@@ -991,23 +1253,22 @@ Telefon
 
 <div class="contact-card">
 
-<div class="big">📸</div>
+<div class="icon">
+📸
+</div>
 
 <h3>
 Instagram
 </h3>
 
 <p>
-
 <a
-target="_blank"
-rel="noopener"
-href="https://instagram.com/lezzankahve">
+href="https://instagram.com/lezzankahve"
+target="_blank">
 
 @lezzankahve
 
 </a>
-
 </p>
 
 </div>
@@ -1015,48 +1276,54 @@ href="https://instagram.com/lezzankahve">
 
 <div class="contact-card">
 
-<div class="big">📍</div>
+<div class="icon">
+📍
+</div>
 
 <h3>
 Mağazamız
 </h3>
 
 <p>
-
 <a
-target="_blank"
-rel="noopener"
-href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x14d0857a3f6fe3e5:0x31bc994622ba7117?entry=s&sa=X&ved=2ahUKEwiaoLPhh6aWAxWjQ_EDHWOWO9cQ4kB6BAgWEAA&hl=tr">
+href="https://maps.google.com"
+target="_blank">
 
-Google Maps'te aç
+Google Maps'te Aç
 
 </a>
-
 </p>
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
 <!-- WHATSAPP -->
 
 <a
-class="float"
-target="_blank"
-rel="noopener"
-href="https://wa.me/905455105242?text=Merhaba%20Lezzan%20Kahve%2C%20bilgi%20almak%20istiyorum.">
+class="whatsapp"
+href="https://wa.me/905455105242?text=Merhaba%20Lezzan%20Kahve%2C%20bilgi%20almak%20istiyorum."
+target="_blank">
 
 💬 WhatsApp
 
 </a>
 
 
+<!-- FOOTER -->
+
 <footer>
+
 © 2026 Lezzan Kahve · Tüm hakları saklıdır.
+
 </footer>
+
 
 </body>
 </html>
